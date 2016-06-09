@@ -18,6 +18,7 @@ install:
   - go get golang.org/x/net/context github.com/stretchr/testify/assert gopkg.in/mgo.v2/bson
 
 script:
+  - env
   - cd $GOPATH/src/github.com/$TRAVIS_REPO_SLUG/v1/tv
   - go build -v github.com/$TRAVIS_REPO_SLUG/v1/tv github.com/$TRAVIS_REPO_SLUG/v1/tv/internal/traceview
   - go test -v -covermode=atomic -coverprofile=cov.out -coverpkg github.com/$TRAVIS_REPO_SLUG/v1/tv/internal/traceview,github.com/$TRAVIS_REPO_SLUG/v1/tv
