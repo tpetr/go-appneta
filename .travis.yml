@@ -27,4 +27,4 @@ script:
   - go test -v -tags traceview -covermode=atomic -coverprofile=covtv.out
   - popd
   - gocovmerge cov.out covtv.out internal/traceview/cov.out internal/traceview/covtv.out > covmerge.out
-  - $GOPATH/bin/goveralls -coverprofile=covmerge.out -service=travis-ci -repotoken $COVERALLS_TOKEN
+  - $GOPATH/bin/goveralls -coverprofile=covmerge.out -service=travis-ci
